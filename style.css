@@ -1,12 +1,43 @@
+
 *{
-  margin: 0;
-  padding: 0;
-  background-color: teal;
+  font-family: ;
 }
 
 .form-container{
-  width: 70%;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 15px;
+  border: 10px solid gray;
+  /* width: 70%; */
+  /* background: rgba(16, 182, 52, 0.623); */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* padding: 10px; */
+  border-radius: 25px;
+  height: 90vh  ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+form{
+  text-align: center;
+border: 10px solid gray;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50vh;
+border-radius: 20px;
+margin: 10px ;
+width: 70%;
+  background: rgba(16, 182, 52, 0.623);
+
+}
+
+.input-box{
+
+  width: 100%;
+  height: 5vh;
+  border-radius: 10px;
+  
 }
