@@ -1,76 +1,70 @@
-
-*{
-  font-family:monospace;
-  /* background: teal; */
+* {
+  font-family: monospace;
 }
 
-body{
+body {
   background: teal;
 }
 
-.form-container{
-  margin-top: 15px;
-  /* border: 10px solid gray; */
-  border-radius: 25px;
-  height: 90vh  ;
+.form-container {
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-
 }
 
-form{
+form {
   background: white;
   text-align: center;
-/* border: 10px solid gray; */
-display: flex;
-justify-content: center;
-align-items: center;
-height: 65vh;
-border-radius: 20px;
-margin: 10px ;
-width: 70%;
-  /* background: rgba(16, 182, 52, 0.623); */
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  border-radius: 10px;
+  margin: 10px;
+  width: 70%;
 }
 
-
-
-.input-box{
-
+.input-box {
   width: 100%;
   height: 5vh;
-  border-radius: 10px;
-  background: white;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.075);
   color: grey;
-  border:1px solid rgba(128, 128, 128, 0.781)
-  
+  border: 1px solid rgba(128, 128, 128, 0.781);
 }
 
-.form-content{
+.input-box:focus {
+  border-color: rgb(19, 139, 29);
+  background: white;
+  color: rgba(0, 0, 0, 0.788);
+  outline-style: none;
+}
 
+.form-content {
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  /* background: red;; */
 }
 
-.submit-button{
+.submit-button {
   width: 100%;
   height: 5vh;
-  background: teal;
+  background: rgba(0, 128, 128, 0.815);
   border: none;
   color: white;
   font-size: 18px;
   border-radius: 5px;
-  
 }
 
-a{
-  color: darkslateblue;
+a {
+  color: rgba(19, 5, 109, 0.815);
   text-decoration: none;
+}
+
+.error-msg {
+  color: red;
+  display: none;
 }
