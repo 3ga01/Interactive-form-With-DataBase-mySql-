@@ -62,9 +62,18 @@ form {
 a {
   color: rgba(19, 5, 109, 0.815);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .error-msg {
   color: red;
   display: none;
+}
+
+.submit-button:active {
+  transform: scale(0.95);
+}
+
+.submit-button:hover {
+  cursor: grab;
 }
