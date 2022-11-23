@@ -6,39 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./style.css" />
+    <script src="main.js" type="text/javascrip"></script>
     <title>Login</title>
   </head>
   <body>
     <div class="form-container">
-      <form action="" method="post">
+      <form onsubmit="return validate()">
         <div class="form-content">
           <h2 class="form-header-text">Login</h2>
 
-          <p class="error-msg">Incorrect username/password</p>
+          <p id="error-msg">Incorrect username/password</p>
 
           <input
-            autofocus
+            id="username"
             required
+            autofocus
             type="text"
             placeholder="Username or email"
-            class="input-box"
           /><br /><br />
 
           <input
-            type="password"
+            id="pass"
             required
+            type="password"
             placeholder="password"
-            class="input-box"
+            ;
           /><br /><br />
 
           <button type="submit" class="submit-button">continue</button>
           <br />
-          
+
           <a href="signUp.html">Forgot your password? </a>
           <br />
           <a href="signUp.html">Don't have an account? Create account</a>
         </div>
       </form>
     </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
