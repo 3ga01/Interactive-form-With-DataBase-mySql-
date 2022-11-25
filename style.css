@@ -13,7 +13,7 @@ body {
   justify-content: center;
 }
 
-form {
+#login-form {
   background: white;
   text-align: center;
   display: flex;
@@ -67,7 +67,8 @@ a {
   cursor: pointer;
 }
 
-#error-msg {
+#error-msg,
+#uName_error {
   color: red;
   display: none;
 }
