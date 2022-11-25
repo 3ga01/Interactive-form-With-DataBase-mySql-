@@ -2,6 +2,7 @@ var pass = document.getElementById("pass");
 var user = document.getElementById("username");
 var loginForm = document.getElementById("login-form");
 var usernameError = document.getElementById("uName_error");
+var submit = document.getElementById("submit");
 // var inputBox = document.getElementById("username");
 
 user.addEventListener("input", function (e) {
