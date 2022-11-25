@@ -1,31 +1,9 @@
-var pass = document.getElementById("pass")
+var pass = document.getElementById("pass");
 var user = document.getElementById("username");
-var error_msg = document.getElementById("error-msg");
-var regex = /^([A-Z a-z])\w+/g;//rgular expression to makke sure username is valid
+const error_msg = document.getElementById("error-msg");
+var regex = /^([A-Z a-z])\w+/g;
 var isExisting = regex.test(user);
 
-
-function validate(){
-
-return user_validate();
-
-
-
-}
-
-function regVal(){
-
-}
-
-function user_validate(){
-  if (user.value < 5 ||  !isExisting){
-    alert("error");
-    return false;
-  }
+function validate() {
   
-
-
-else 
-return true;  
-
 }
