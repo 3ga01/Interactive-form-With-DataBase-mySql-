@@ -3,6 +3,7 @@ var user = document.getElementById("username");
 var email = document.getElementById("email");
 var loginForm = document.getElementById("login-form");
 var submit = document.getElementById("submit");
+var vPass = document.getElementById("vPass");
 var currentValue;
 // var inputBox = document.getElementById("username");
 
@@ -21,13 +22,22 @@ user.addEventListener("input", function (e) {
 
 pass.addEventListener("input", function (e) {
   var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
-  var currentValue = e.target.value;
+  currentValue = e.target.value;
 
   var valid = pattern.test(currentValue);
   if (!valid) {
     pass.style.border = "1px solid red";
   } else {
     pass.style.border = "1px solid green";
+  }
+});
+
+vPass.addEventListener("input", function (e) {
+  var newCurrentValue = e.target.value;
+  if (newCurrentValue === currentValue) {
+    vPass.style.border = "1px solid green";
+  } else {
+    vPass.style.border = "1px solid red";
   }
 });
 
