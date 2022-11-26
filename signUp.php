@@ -1,3 +1,39 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php"); 
+
+// $user_data = check_login($con);
+
+if ($_SERVER['REQUEST_METHOD'] == "POST"){
+   
+  //SOMETHING WAS POSTED
+  $user_name = $_POST['user_name'];
+  $password = $_POST['password'];
+
+  if(!empty($user_name) && !empty($password) && !is_numeric($user_name)){
+
+
+    $user_id = random_num(20);
+
+    $query = "insert into users (user_id, user_name, password) values ('$user_id', '$user_name', '$password')";
+
+    mysqli_query($con, $query);
+    
+    header("Location: login.php");
+    die;
+
+  }
+  else
+  {
+    echo "Please enter some valid information";
+  }
+  
+}
+?> 
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +48,7 @@
   <body>
     
     <div class="form-container">
-      <form action="landing.html" id="login-form">
+      <form  id="login-form" method="post">
         <div class="form-content">
           <h2 class="form-header-text">Sign up</h2>
 
@@ -22,6 +58,7 @@
             type="text"
             placeholder="Username"
             id="username"
+            name="user_name"
           /><br />
 
           <input
@@ -36,6 +73,7 @@
             type="password"
             placeholder="password "
             id="pass"
+            name = "password"
           /><br />
 
           <input
@@ -45,10 +83,10 @@
             id="vPass"
           /><br /><br />
 
-          <button type="submit" id="submit-button">continue</button>
+          <button type="submit" id="button">continue</button>
           <br />
 
-          <a href="login.html">Already have an account? sign in</a><br />
+          <a href="login.php">Already have an account? sign in</a><br />
         </div>
 
       </form>

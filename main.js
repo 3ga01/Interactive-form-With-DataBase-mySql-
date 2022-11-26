@@ -2,10 +2,14 @@ var pass = document.getElementById("pass");
 var user = document.getElementById("username");
 var email = document.getElementById("email");
 var loginForm = document.getElementById("login-form");
-var submit = document.getElementById("submit");
+var submit = document.getElementById("button");
 var vPass = document.getElementById("vPass");
 var currentValue;
+var login = document.getElementById("login-form");
+var userError = document.getElementById("uError");
 // var inputBox = document.getElementById("username");
+
+// event.preventDefault();
 
 user.addEventListener("input", function (e) {
   var pattern =
@@ -15,6 +19,10 @@ user.addEventListener("input", function (e) {
   var valid = pattern.test(currentValue);
   if (!valid) {
     user.style.border = "1px solid red";
+
+    login.addEventListener("submit", function (e) {
+      event.preventDefault();
+    });
   } else {
     user.style.border = "1px solid green";
   }
@@ -36,6 +44,7 @@ vPass.addEventListener("input", function (e) {
   var newCurrentValue = e.target.value;
   if (newCurrentValue === currentValue) {
     vPass.style.border = "1px solid green";
+    e.preventDefault();
   } else {
     vPass.style.border = "1px solid red";
   }
