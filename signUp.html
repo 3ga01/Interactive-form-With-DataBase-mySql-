@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./style.css" />
+
     <title>Sign up</title>
   </head>
   <body>
     <div class="form-container">
-      <form action="" method="post">
+      <form action="landing.html" id="login-form">
         <div class="form-content">
           <h2 class="form-header-text">Sign up</h2>
 
@@ -18,36 +19,40 @@
             autofocus
             required
             type="text"
-            placeholder="Username "
-            class="input-box"
-          /><br /><br />
+            placeholder="Username"
+            id="username"
+          /><br />
 
           <input
             required
             type="email"
             placeholder="email address"
-            class="input-box"
-          /><br /><br />
+            id="email"
+          /><br />
 
           <input
             required
             type="password"
             placeholder="password "
-            class="input-box"
-          /><br /><br />
+            id="pass"
+          /><br />
 
           <input
             required
             type="password"
             placeholder="confirm password"
-            class="input-box"
+            id="vPass"
           /><br /><br />
-          <button type="submit" class="submit-button">continue</button>
+          <button type="submit" id="submit-button">continue</button>
           <br />
 
           <a href="login.html">Already have an account? sign in</a><br />
         </div>
       </form>
     </div>
+
+
+        <script src="./main.js"></script>
+
   </body>
 </html>
